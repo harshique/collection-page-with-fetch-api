@@ -1,0 +1,66 @@
+#container-d{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+width: 100%;
+margin: auto;
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+background-size: contain;
+justify-content: center;
+background-repeat: repeat-y;
+padding-bottom: 3rem;
+padding-top: 4rem;
+}
+
+.card{
+    width:23%;
+    background-color: blanchedalmond;
+}
+
+h2.title {
+text-align: center;
+}
+p.price {
+text-align: center;
+font-size: 2rem;
+font-family: monospace;
+}
+p.desc {
+padding: 20px;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+.image-fit img{
+height:100px;
+padding-left: 35%;
+left: 35%;
+width: 100px;
+}
+.heading{
+background-color: crimson;
+margin-top: -8px;
+padding: 1rem;
+width: 100%;
+text-align: center;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* margin-bottom: 12px; */
+color: white;
+position: fixed;
+border: 3px solid black;
+}
+@media (max-width:767px){
+.heading{
+font-size:17px;
+padding:10px;
+width: 95vw;
+border: none;
+}
+.card{
+width:90%;
+}
+#container-d{
+padding-top: 5rem;
+}
+}
