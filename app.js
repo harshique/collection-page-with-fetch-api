@@ -2,6 +2,7 @@ fetch("https://fakestoreapi.com/products").then((data)=>{
     console.log(data)
     return data.json();
 }).then((objData)=>{
+    console.log("data",objData,typeof objData)
     let data1="";
     objData.map((value)=>{
         console.log("harsh",value.category)
@@ -10,6 +11,7 @@ fetch("https://fakestoreapi.com/products").then((data)=>{
         <p class="desc">${value.description}</p>
         <div class="image-fit"><img src="${value.image}" alt="image-one"></div>
         <p class="price">${value.price}</p>
+        <p class="reviews"><span>Rating</span>${value.rating.rate}/5</p>
     </div> `;
     
     });
@@ -18,15 +20,18 @@ fetch("https://fakestoreapi.com/products").then((data)=>{
     console.log(err);
 })
 
-var previousScrolled = window.pageYOffset;
+var previousScrolled = window.scrollY;
+
 console.log("kitna scroll hua hai ",previousScrolled)
 window.onscroll= function(e){
-    var currentScrolled = window.pageYOffset;
+    
+    var currentScrolled = window.scrollY;
+    console.log("prev",currentScrolled,typeof(previousScrolled),)
     if(previousScrolled > currentScrolled){
-        document.querySelector('.heading').style.top = "0";
+        document.querySelector('#heading').style.top = "0";
     }
     else{
-        document.querySelector('.heading').style.top = "-50px";
+        document.querySelector('#heading').style.top = "-100px";
     
     }
     previousScrolled = currentScrolled;
